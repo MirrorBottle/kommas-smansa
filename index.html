@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Photosen &mdash; Colorlib Website Template</title>
+  <title>Komunikasi Masyarakat SMAN 1 Loa Jalan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,7 +17,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-  <link rel="stylesheet" href="css/lightgallery.min.css">    
+  <link rel="stylesheet" href="css/lightgallery.min.css">
 
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
@@ -26,7 +29,10 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
+
 <body>
 
   <div class="site-wrap">
@@ -39,12 +45,8 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
-
-
 
     <header class="site-navbar py-3" role="banner">
-
       <div class="container-fluid">
         <div class="row align-items-center">
 
@@ -56,75 +58,33 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="active"><a href="index.html">Beranda</a></li>
-                <li><a href="services.html">Tentang</a></li>
-                <li><a href="about.html">Dokumentasi</a></li>
-                <li><a href="contact.html">Lampiran</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="documentation.html">Dokumentasi</a></li>
+                <li><a href="attachment.html">Lampiran</a></li>
               </ul>
             </nav>
           </div>
-
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+                class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
           </div>
         </div>
       </div>
     </header>
+
     <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Alif Maulana Setyawan</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
+      <div class="row" x-data="data">
+        <template x-for="profile in profiles" :key="profile.path">
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h2 class="mb-3" x-text="profile.name"></h2>
+                <a :href="`sites/${profile.path}/index.html`" target="_blank" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
+              </div>
+              <img :src="`sites/${profile.path}/${profile.path}.jpg`" alt="Image" class="img-fluid">
             </div>
-            <img src="images/people/awan.jpg" alt="Image" class="img-fluid">
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Alfi Nor Ihsan</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
-            </div>
-            <img src="images/people/alfi.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Ananta Yusra Putra Akmal</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
-            </div>
-            <img src="images/people/nanta.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Bayu Setiawan</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
-            </div>
-            <img src="images/people/bayu.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Reihan Al Sya'ban</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
-            </div>
-            <img src="images/people/saban.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="image-wrap-2">
-            <div class="image-info">
-              <h2 class="mb-3">Muhammad Firdaus</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
-            </div>
-            <img src="images/people/daus.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
+        </template>
       </div>
     </div>
     <div class="footer py-4">
@@ -152,12 +112,28 @@
   <script src="js/jquery.mousewheel.min.js"></script>
 
   <script src="js/main.js"></script>
-  
+
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('#lightgallery').lightGallery();
     });
   </script>
 
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('data', () => ({
+        profiles: [
+          { path: "alif-maulana-setyawan", name: "Alif Maulana Setyawan" },
+          { path: "alfi-nor-ihsan", name: "Alfi Nor Ihsan" },
+          { path: "ananta-yusra-putra-akmal", name: "Ananta Yusra Putra Akmal" },
+          { path: "bayu-setiawan", name: "Bayu Setiawan" },
+          { path: "reihan-al-syaban", name: "Reihan Al Sya'ban" },
+          { path: "muhammad-firdaus", name: "Muhammad FIrdaus" }
+        ],
+      }));
+    });
+  </script>
+
 </body>
+
 </html>
