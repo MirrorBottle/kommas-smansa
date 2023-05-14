@@ -1642,6 +1642,7 @@ a:hover {
   top: 0;
   left: 0;
   margin-bottom: 30px;
+  height: 70vh!important;
 }
 
 .image-wrap-2:before {
@@ -1665,6 +1666,10 @@ a:hover {
   -webkit-filter: grayscale(1);
   /* Webkit Nightlies & Chrome Canary */
   -webkit-transition: all .1s ease-in-out;
+  background-size: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .image-wrap-2:hover img {

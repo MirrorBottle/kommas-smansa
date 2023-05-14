@@ -29,8 +29,6 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 </head>
 
 <body>
@@ -55,10 +53,10 @@
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Beranda</a></li>
-                <li><a href="services.html">Tentang</a></li>
-                <li><a href="about.html">Dokumentasi</a></li>
-                <li><a href="contact.html">Lampiran</a></li>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="about.html">Tentang</a></li>
+                <li><a href="documentation.html">Dokumentasi</a></li>
+                <li><a href="attachment.html">Lampiran</a></li>
               </ul>
             </nav>
           </div>
@@ -71,26 +69,29 @@
     </header>
 
 
-    <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-      <div class="row" x-data="data">
-        <template x-for="profile in profiles" :key="profile.path">
-          <div class="col-lg-4">
-            <div class="image-wrap-2">
-              <div class="image-info">
-                <h2 class="mb-3" x-text="profile.name"></h2>
-                <a href="single.html" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
+    <div class="site-section" data-aos="fade">
+      <div class="container-fluid">
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-7">
+            <div class="row mb-5">
+              <div class="col-12 ">
+                <h2 class="site-section-heading text-center">Tentang</h2>
               </div>
-              <img :src="`sites/${profile.path}/${profile.path}.jpg`" alt="Image" class="img-fluid">
             </div>
           </div>
-        </template>
+
+        </div>
       </div>
     </div>
+
     <div class="footer py-4">
       <div class="container-fluid text-center">
-        <p>Informatika A 2021, Komunikasi Masyarakat - 2023</p>
+        <p>Informatika A 2021, Komputer Masyarakat - 2023</p>
       </div>
     </div>
+    
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
@@ -115,21 +116,6 @@
   <script>
     $(document).ready(function () {
       $('#lightgallery').lightGallery();
-    });
-  </script>
-
-  <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.data('data', () => ({
-        profiles: [
-          { path: "alif-maulana-setyawan", name: "Bayu Setiawan" },
-          { path: "alfi-nor-ihsan", name: "Alfi Nor Ihsan" },
-          { path: "ananta-yusra-putra-akmal", name: "Ananta Yusra Putra Akmal" },
-          { path: "bayu-setiawan", name: "Bayu Setiawan" },
-          { path: "reihan-al-syaban", name: "Reihan Al Sya'ban" },
-          { path: "muhammad-firdaus", name: "Muhammad FIrdaus" }
-        ],
-      }));
     });
   </script>
 
