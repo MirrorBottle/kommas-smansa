@@ -74,27 +74,12 @@
 
     <div class="container-fluid" data-aos="fade" data-aos-delay="500">
       <div class="row" x-data="data">
-        <template x-for="member in members" :key="member.path">
-          <div class="col-lg-4">
-            <div class="image-wrap-2">
-              <div class="image-info">
-                <h2 class="mb-3" x-text="member.name"></h2>
-                <a :href="`sites/${member.path}/index.html`" target="_blank" class="btn btn-outline-white py-2 px-4">Lihat Anggota</a>
-              </div>
-              <img :src="`sites/${member.path}/${member.path}.jpg`" alt="Image" class="img-fluid">
-            </div>
-          </div>
-        </template>
-      </div>
-
-
-      <div class="row" x-data="data">
         <template x-for="profile in profiles" :key="profile.path">
           <div class="col-lg-4">
             <div class="image-wrap-2">
               <div class="image-info">
                 <h2 class="mb-3" x-text="profile.name"></h2>
-                <a :href="`sites/${profile.path}/index.html`" target="_blank" class="btn btn-outline-white py-2 px-4">Lihat CV</a>
+                <a :href="`sites/${profile.path}/index.html`" target="_blank" class="btn btn-outline-white py-2 px-4">Lihat Anggota</a>
               </div>
               <img :src="`sites/${profile.path}/${profile.path}.jpg`" alt="Image" class="img-fluid">
             </div>
@@ -137,17 +122,10 @@
   <script>
     document.addEventListener('alpine:init', () => {
       Alpine.data('data', () => ({
-        members: [
-          { path: "X-1", name: "Kelas X-1" }
-        ],
-
         profiles: [
-          { path: "alif-maulana-setyawan", name: "Alif Maulana Setyawan" },
-          { path: "alfi-nor-ihsan", name: "Alfi Nor Ihsan" },
-          { path: "ananta-yusra-putra-akmal", name: "Ananta Yusra Putra Akmal" },
-          { path: "bayu-setiawan", name: "Bayu Setiawan" },
-          { path: "reihan-al-syaban", name: "Reihan Al Sya'ban" },
-          { path: "muhammad-firdaus", name: "Muhammad Firdaus" }
+          { path: "X-1", name: "Kelas X-1" },
+          { path: "X-3", name: "Kelas X-3" },
+          { path: "Kelompok-3", name: "Kelompok 3" }
         ],
       }));
     });
